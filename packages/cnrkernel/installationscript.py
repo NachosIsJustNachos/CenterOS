@@ -26,3 +26,4 @@ with open("main.py") as mainscript:
     import sys
     sys.path.append("kernels/cnrkernel_v1/kernelscripts")
     import cnrkernel_v1
+    """)
