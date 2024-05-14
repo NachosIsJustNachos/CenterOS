@@ -20,3 +20,9 @@ os.mkdir("kernels/cnrkernel_v1/kernelinfo")
 with open("kernels/cnrkernel_v1/kernelscripts/cnrkernel_v1.py") as kernelscript:
     mainkernelscript = requests.get("https://raw.githubusercontent.com/NachosIsJustNachos/CenterOS/main/packages/cnrkernel/cnrkernel.py")
     kernelscript.write(mainkernelscript)
+
+with open("main.py") as mainscript:
+    mainscript.write("""
+    import sys
+    sys.path.append("kernels/cnrkernel_v1/kernelscripts")
+    import cnrkernel_v1
